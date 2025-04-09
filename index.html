@@ -29,13 +29,24 @@
         }
     </script>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #projects-container {
+            scroll-behavior: smooth;
+        }
+        .project-card {
+            box-sizing: border-box;
+            padding: 1.5rem;
+            width: 20rem;
+            white-space: normal;
+        }
+    </style>
 </head>
 <body class="bg-white dark:bg-navy text-black dark:text-white transition-colors duration-300 font-body">
     <!-- Header/Navigation -->
     <header class="bg-white shadow-md dark:bg-navy dark:shadow-gray-900/50 mx-auto px-4 py-6">
         <nav class="container mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold">Greg Salmon</div>
-            <div class="hidden md:flex space-x-6">
+            <!-- <div class="text-xl font-bold">Greg Salmon</div> -->
+            <div class="container md:flex justify-center items-center space-x-6">
                 <a href="#projects" class="hover:text-teal dark:hover:text-teal">Projects</a>
                 <a href="#education" class="hover:text-teal dark:hover:text-teal">Education</a>
                 <a href="#resume" class="hover:text-teal dark:hover:text-teal">Resume</a>
@@ -69,22 +80,104 @@
     <section id="projects" class="bg-gray-50 dark:bg-gray-900 py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold font-heading mb-8 text-center">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project Card 1 -->
-                <div class="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 rounded-lg overflow-hidden">
-                    <div class="h-48 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                        <p class="text-gray-500 dark:text-gray-400">Project Image</p>
+            <div class="relative max-w-4xl mx-auto">
+                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 dark:bg-gray-700 p-2 rounded-full z-10" id="scroll-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="overflow-x-auto whitespace-nowrap space-x-6 flex px-6" id="projects-container">
+                    <!-- Cloud Resume Challenge -->
+                    <div class="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 rounded-lg inline-block project-card cursor-pointer" onclick="window.open('https://www.medium.com/@mrgrorg/from-paper-to-pixels-the-cloud-resume-challenge-fe74287f7808', '_blank')">
+                        <h3 class="text-xl font-semibold text-center mb-4">Cloud Resume Challenge</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center mb-6">Built a full-stack solution to showcase technical skills and track visitor engagement.</p>
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-700 flex items-center justify-center rounded-lg">
+                            <p class="text-gray-500 dark:text-gray-400">Image Placeholder</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Project Name</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Brief description of the project and technologies used.</p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-gray-800 dark:text-white hover:text-teal dark:hover:text-teal hover:underline">Demo</a>
-                            <a href="#" class="text-teal dark:text-teal hover:underline">Code</a>
+                    <!-- Cyber Lions -->
+                    <div class="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 rounded-lg inline-block project-card cursor-pointer" onclick="window.open('project-pages/cyber-lions.html', '_blank')">
+                        <h3 class="text-xl font-semibold text-center mb-4">Cyber Lions</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center mb-6">Developed a hands-on cybersecurity lab to train students in red and blue team techniques.</p>
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-700 flex items-center justify-center rounded-lg">
+                            <p class="text-gray-500 dark:text-gray-400">Image Placeholder</p>
+                        </div>
+                    </div>
+                    <!-- New Project 1 -->
+                    <div class="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 rounded-lg inline-block project-card cursor-pointer" onclick="window.open('project-pages/ai-chatbot.html', '_blank')">
+                        <h3 class="text-xl font-semibold text-center mb-4">AI Chatbot</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center mb-6">Created an AI-powered chatbot to assist users with technical queries.</p>
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-700 flex items-center justify-center rounded-lg">
+                            <p class="text-gray-500 dark:text-gray-400">Image Placeholder</p>
+                        </div>
+                    </div>
+                    <!-- New Project 2 -->
+                    <div class="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 rounded-lg inline-block project-card cursor-pointer" onclick="window.open('project-pages/portfolio-website.html', '_blank')">
+                        <h3 class="text-xl font-semibold text-center mb-4">Portfolio Website</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center mb-6">Designed and developed a personal portfolio website to showcase projects and skills.</p>
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-700 flex items-center justify-center rounded-lg">
+                            <p class="text-gray-500 dark:text-gray-400">Image Placeholder</p>
                         </div>
                     </div>
                 </div>
-                <!-- Add more project cards as needed -->
+                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 dark:bg-gray-700 p-2 rounded-full z-10" id="scroll-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="bg-gray-50 dark:bg-gray-900 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold font-heading mb-8 text-center">Experience</h2>
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- IT Intern -->
+                <div class="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">IT Intern - Sysdig</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-center mb-6">Developed innovative solutions to optimize IT operations and enhance team productivity.</p>
+                    <div class="grid grid-cols-2 gap-8 text-center">
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-teal mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            <p class="text-gray-700 dark:text-gray-300">Chatbot Prototype</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-teal mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21V3m0 0l-4 4m4-4l4 4" />
+                            </svg>
+                            <p class="text-gray-700 dark:text-gray-300">License Automation</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-teal mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l-4-4m0 0l4-4m-4 4h16" />
+                            </svg>
+                            <p class="text-gray-700 dark:text-gray-300">Tutorials</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Student Tutor -->
+                <div class="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">Student Tutor - LMU Computer Science</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-center mb-6">Guided students through complex algorithms and coding challenges to foster academic success.</p>
+                    <div class="grid grid-cols-2 gap-8 text-center">
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-teal mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            <p class="text-gray-700 dark:text-gray-300">Algorithms</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-teal mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21V3m0 0l-4 4m4-4l4 4" />
+                            </svg>
+                            <p class="text-gray-700 dark:text-gray-300">Code Review</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -96,16 +189,16 @@
             <div class="max-w-3xl mx-auto space-y-8">
                 <!-- BS Degree -->
                 <div class="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold">Bachelor of Science</h3>
-                    <p class="text-lg mt-2">University Name</p>
-                    <p class="text-gray-600 dark:text-gray-300 mt-1">2016 - 2020</p>
+                    <h3 class="text-xl font-semibold">MSc - AI for Sustainable Development</h3>
+                    <p class="text-lg mt-2">University College London</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-1">2024 - 2025</p>
                     <p class="mt-4 text-gray-700 dark:text-gray-300">Description of your degree, major, and any relevant coursework or achievements.</p>
                 </div>
                 <!-- MSc Degree -->
                 <div class="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold">Master of Science</h3>
-                    <p class="text-lg mt-2">University Name</p>
-                    <p class="text-gray-600 dark:text-gray-300 mt-1">2020 - 2022</p>
+                    <h3 class="text-xl font-semibold">BS - Information Systems and Business Analytics</h3>
+                    <p class="text-lg mt-2">Loyola Marymount University</p>
+                    <p class="text-gray-600 dark:text-gray-300 mt-1">2020 - 2025</p>
                     <p class="mt-4 text-gray-700 dark:text-gray-300">Description of your degree, focus area, and any notable research or projects.</p>
                 </div>
             </div>
@@ -123,7 +216,7 @@
                     </svg>
                     <h3 class="text-xl font-semibold mb-4">Download My Resume</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-6">Get a complete overview of my experience, skills, and qualifications.</p>
-                    <a href="assets/resume.pdf" target="_blank" class="inline-block bg-teal text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-opacity-90 transition-colors duration-300">
+                    <a href="assets/GregSalmon-CV.html" target="_blank" class="inline-block bg-teal text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-opacity-90 transition-colors duration-300">
                         Download Resume
                     </a>
                 </div>
@@ -162,5 +255,16 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('scroll-left').addEventListener('click', () => {
+            const container = document.getElementById('projects-container');
+            container.scrollBy({ left: -container.offsetWidth, behavior: 'smooth' });
+        });
+
+        document.getElementById('scroll-right').addEventListener('click', () => {
+            const container = document.getElementById('projects-container');
+            container.scrollBy({ left: container.offsetWidth, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

@@ -41,4 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Scroll buttons for projects container
+    document.getElementById('scroll-left').addEventListener('click', () => {
+        const container = document.getElementById('projects-container');
+        container.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    document.getElementById('scroll-right').addEventListener('click', () => {
+        const container = document.getElementById('projects-container');
+        container.scrollBy({ left: 300, behavior: 'smooth' });
+    });
 });
