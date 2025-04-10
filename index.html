@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greg Salmon | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'black': '#000000',
+                        'red': '#FF0000',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body class="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300 font-body">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md dark:bg-black dark:shadow-neutral-900/50 mx-auto px-4 py-6">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="container md:flex justify-center items-center space-x-6">
+                <a href="#projects" class="hover:text-red">Projects</a>
+                <a href="#experience" class="hover:text-red">Experience</a>
+                <a href="#education" class="hover:text-red">Education</a>
+                <a href="#resume" class="hover:text-red">Resume</a>
+                <a href="#contact" class="hover:text-red">Contact</a>
+            </div>
+            <button id="theme-toggle" class="p-2 rounded-full">
+                <svg id="sun-icon" class="w-6 h-6 hidden dark:block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
+                </svg>
+                <svg id="moon-icon" class="w-6 h-6 block dark:hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-white dark:bg-black mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen border-b border-neutral-200">
+        <h1 class="text-5xl md:text-7xl font-bold font-heading mb-4">Greg Salmon</h1>
+        <h2 class="text-2xl md:text-3xl font-heading mb-8">Machine Learning Engineer</h2>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-neutral-50 dark:bg-black py-16 border-b border-neutral-200 dark:border-neutral-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold font-heading mb-8 text-center">Projects</h2>
+            <div class="relative max-w-4xl mx-auto">
+                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-neutral-200 dark:bg-neutral-700 p-2 rounded-full z-10" id="scroll-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="overflow-x-auto whitespace-nowrap space-x-6 flex px-6" id="projects-container">
+                    <!-- Bayesian Uncertainty Models for Occluded Landmine Detection -->
+                    <div class="bg-white dark:bg-black shadow-lg border rounded-lg inline-block project-card cursor-pointer" onclick="window.open('assets/landmine_literature_review.pdf', '_blank')">
+                        <h3 class="text-xl font-semibold text-center mb-4">Uncertainty Models for Occluded Landmine Detection - Literature Review</h3>
+                        <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">MSc dissertation literature review focused on quantifying uncertainty in machine vision-based landmine detection models</p>
+                        <div class="aspect-w-16 aspect-h-9 bg-neutral-100 dark:bg-neutral-700 flex items-end rounded-lg">
+                            <img src="images/landmine_detection.png" alt="Landmine Detection Image" class="rounded-lg">
+                        </div>
+                    </div>
+
+                    <!-- Fall Detection -->
+                    <div class="bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 rounded-lg inline-block project-card cursor-pointer" onclick="window.open('https://github.com/ElGrorg/LSTMFallDetection/tree/main', '_blank')">
+                        <h3 class="text-xl font-semibold text-center mb-4">Fall Detection via LSTM and Random Forest</h3>
+                        <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">This project focuses on analyzing and modeling human activity data collected from wearable sensors.</p>
+                        <div class="aspect-w-16 aspect-h-9 bg-transparent flex justify-center items-end rounded-lg">
+                            <img src="images/fall_detection.png" alt="Fall Detection Image" class="rounded-lg">
+                        </div>
+                    </div>
+
+                    <!-- Cloud Resume Challenge -->
+                    <div class="bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 rounded-lg inline-block project-card cursor-pointer" onclick="window.open('https://www.medium.com/@mrgrorg/from-paper-to-pixels-the-cloud-resume-challenge-fe74287f7808', '_blank')">
+                        <h3 class="text-xl font-semibold text-center mb-4">Cloud Resume Challenge</h3>
+                        <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">Built a full-stack solution to showcase technical skills and track visitor engagement.</p>
+                        <div class="aspect-w-16 aspect-h-9 bg-neutral-100 dark:bg-neutral-700 flex items-end justify-center rounded-lg">
+                            <img src="images/resume_robot.png" alt="Robot Image" class="rounded-lg">
+                        </div>
+                    </div>
+                
+                    <!-- Cyber Lions -->
+                    <div class="bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 rounded-lg inline-block project-card cursor-pointer" onclick="window.open('https://github.com/CyberLionz/CyberLions-CyberSecurity-Lab', '_blank')">
+                        <h3 class="text-xl font-semibold text-center mb-4">Cyber Lions: Cybersecurity Lab</h3>
+                        <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">Developed a cybersecurity lab with detailed documentation and tutorials.</p>
+                        <div class="aspect-w-16 aspect-h-9 bg-neutral-100 dark:bg-neutral-700 flex items-end justify-center rounded-lg">
+                            <img src="images/cyberlions.png" alt="CyberLions Image" class="rounded-lg">
+                        </div>
+                    </div>
+                </div>
+                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-neutral-200 dark:bg-neutral-700 p-2 rounded-full z-10" id="scroll-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="bg-white dark:bg-black py-16 border-b border-neutral-200 dark:border-neutral-700">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold font-heading mb-8 text-center">Experience</h2>
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- IT Intern -->
+                <div class="bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">IT Intern - Sysdig</h3>
+                    <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">Developed innovative solutions to optimize IT operations and enhance team productivity.</p>
+                    <div class="grid grid-cols-3 gap-8 text-center">
+                        <div class="flex flex-col items-center">
+                            <i class="fas fa-robot text-red mb-4 text-5xl"></i>
+
+                            <p class="text-neutral-700 dark:text-neutral-300">Chatbot Prototype</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="fas fa-retweet text-red mb-4 text-5xl"></i>
+
+                            <p class="text-neutral-700 dark:text-neutral-300">License Automation</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="far fa-folder-open text-red mb-4 text-5xl"></i>
+
+                            <p class="text-neutral-700 dark:text-neutral-300">Documentation</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Student Tutor -->
+                <div class="bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">Student Tutor - LMU Computer Science</h3>
+                    <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">Guided students through complex algorithms and coding challenges to foster academic success.</p>
+                    <div class="grid grid-cols-2 gap-8 text-center">
+                        <div class="flex flex-col items-center">
+                            <i class="fas fa-network-wired	 text-red mb-4 text-5xl"></i>
+
+                            <p class="text-neutral-700 dark:text-neutral-300">Algorithms</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="fas fa-laptop-code text-red mb-4 text-5xl"></i>
+
+                            <p class="text-neutral-700 dark:text-neutral-300">Code Review</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="bg-neutral-50 dark:bg-black py-16 border-b border-neutral-200 dark:border-neutral-700">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold font-heading mb-8 text-center">Education</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- BS Degree -->
+                <div class="bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold">MSc - AI for Sustainable Development</h3>
+                    <p class="text-lg mt-2">University College London</p>
+                    <p class="text-neutral-600 dark:text-neutral-300 mt-1">2024 - 2025</p>
+                    <p class="mt-4 text-neutral-700 dark:text-neutral-300">
+                        Combines in-depth knowledge of machine learning foundations with 
+                        sustainability techniques, specifically focusing on the UN's 
+                        Sustainable Development Goals. The program culminates in a 
+                        dissertation, demonstrating ability to apply advanced AI 
+                        methodologies to real-world sustainability challenges.
+                    </p>
+                    <br><hr><br>
+                    <p>
+                        <b>Dissertation: </b> Bayesian Uncertainty Models for Occluded Landmine Detection
+                    </p>
+                </div>
+                <!-- MSc Degree -->
+                <div class="bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold">BS - Information Systems and Business Analytics</h3>
+                    <p class="text-lg mt-2">Loyola Marymount University</p>
+                    <p class="text-neutral-600 dark:text-neutral-300 mt-1">2020 - 2025</p>
+                    <p class="mt-4 text-neutral-700 dark:text-neutral-300">
+                        Four year program, where I developed data science, computer science, 
+                        and business analytics skills through interesectional classes such as 
+                        <i>Networking and Cloud Computing</i>, <i>Cognitive Systems Design</i>, 
+                        <i>Artificial Intelligence</i>, and <i>Developing Business Applications with SQL</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="bg-white dark:bg-black py-16 border-b border-neutral-200 dark:border-neutral-700">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold font-heading mb-8 text-center">Resume</h2>
+            <div class="max-w-md mx-auto bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 p-8 rounded-lg">
+                <div class="flex flex-col items-center text-center">
+                    <i class="far fa-file-alt text-red mb-4 text-5xl"></i>
+                    <h3 class="text-xl font-semibold mb-4">Download My Resume</h3>
+                    <p class="text-neutral-600 dark:text-neutral-300 mb-6">Get a complete overview of my experience, skills, and qualifications.</p>
+                    <a href="assets/GregSalmon-CV.html" target="_blank" class="inline-block bg-red text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-opacity-90 transition-colors duration-300">
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-neutral-50 dark:bg-black py-16 border-b border-neutral-200 dark:border-neutral-700">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold font-heading mb-8 text-center">Contact</h2>
+            <div class="max-w-md mx-auto bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 p-8 rounded-lg">
+                <div class="space-y-6">
+                    <div class="flex items-center">
+                        <span class="text-red mr-3">📧</span>
+                        <a href="mailto:gwsalmon@icloud.com" class="text-neutral-700 dark:text-neutral-300 hover:text-red">gwsalmon@icloud.com</a>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-red mr-3">🔗</span>
+                        <a href="https://linkedin.com/in/gregsalmon24/" target="_blank" class="text-neutral-700 dark:text-neutral-300 hover:text-red">LinkedIn</a>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-red mr-3">💻</span>
+                        <a href="https://github.com/ElGrorg" target="_blank" class="text-neutral-700 dark:text-neutral-300 hover:text-red">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-black shadow-inner py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-neutral-600 dark:text-neutral-300">© 2025 Greg Salmon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('scroll-left').addEventListener('click', () => {
+            const container = document.getElementById('projects-container');
+            container.scrollBy({ left: -container.offsetWidth, behavior: 'smooth' });
+        });
+
+        document.getElementById('scroll-right').addEventListener('click', () => {
+            const container = document.getElementById('projects-container');
+            container.scrollBy({ left: container.offsetWidth, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
