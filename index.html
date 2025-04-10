@@ -69,12 +69,13 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
+
                 <div class="overflow-x-auto whitespace-nowrap space-x-6 flex px-6" id="projects-container">
                     <!-- Bayesian Uncertainty Models for Occluded Landmine Detection -->
                     <div class="bg-white dark:bg-black shadow-lg border rounded-lg inline-block project-card cursor-pointer" onclick="window.open('assets/landmine_literature_review.pdf', '_blank')">
                         <h3 class="text-xl font-semibold text-center mb-4">Uncertainty Models for Occluded Landmine Detection - Literature Review</h3>
                         <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">MSc dissertation literature review focused on quantifying uncertainty in machine vision-based landmine detection models</p>
-                        <div class="aspect-w-16 aspect-h-9 bg-neutral-100 dark:bg-neutral-700 flex items-end rounded-lg">
+                        <div class="aspect-w-16 aspect-h-9 bg-transparent flex justify-center items-end rounded-lg mt-8">
                             <img src="images/landmine_detection.png" alt="Landmine Detection Image" class="rounded-lg">
                         </div>
                     </div>
@@ -82,8 +83,8 @@
                     <!-- Fall Detection -->
                     <div class="bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 rounded-lg inline-block project-card cursor-pointer" onclick="window.open('https://github.com/ElGrorg/LSTMFallDetection/tree/main', '_blank')">
                         <h3 class="text-xl font-semibold text-center mb-4">Fall Detection via LSTM and Random Forest</h3>
-                        <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">This project focuses on analyzing and modeling human activity data collected from wearable sensors.</p>
-                        <div class="aspect-w-16 aspect-h-9 bg-transparent flex justify-center items-end rounded-lg">
+                        <p class="text-neutral-600 dark:text-neutral-300 text-center">This project focuses on analyzing and modeling human activity data collected from wearable sensors.</p>
+                        <div class="aspect-w-16 aspect-h-9 bg-transparent flex justify-center items-end rounded-lg mt-20">
                             <img src="images/fall_detection.png" alt="Fall Detection Image" class="rounded-lg">
                         </div>
                     </div>
@@ -92,7 +93,7 @@
                     <div class="bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 rounded-lg inline-block project-card cursor-pointer" onclick="window.open('https://www.medium.com/@mrgrorg/from-paper-to-pixels-the-cloud-resume-challenge-fe74287f7808', '_blank')">
                         <h3 class="text-xl font-semibold text-center mb-4">Cloud Resume Challenge</h3>
                         <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">Built a full-stack solution to showcase technical skills and track visitor engagement.</p>
-                        <div class="aspect-w-16 aspect-h-9 bg-neutral-100 dark:bg-neutral-700 flex items-end justify-center rounded-lg">
+                        <div class="aspect-w-16 aspect-h-9 bg-neutral-100 dark:bg-neutral-700 flex items-end justify-center rounded-lg mt-16">
                             <img src="images/resume_robot.png" alt="Robot Image" class="rounded-lg">
                         </div>
                     </div>
@@ -126,17 +127,17 @@
                     <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">Developed innovative solutions to optimize IT operations and enhance team productivity.</p>
                     <div class="grid grid-cols-3 gap-8 text-center">
                         <div class="flex flex-col items-center">
-                            <i class="fas fa-robot text-red mb-4 text-5xl"></i>
+                            <i class="fas fa-robot text-black dark:text-white mb-4 text-5xl"></i>
 
                             <p class="text-neutral-700 dark:text-neutral-300">Chatbot Prototype</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <i class="fas fa-retweet text-red mb-4 text-5xl"></i>
+                            <i class="fas fa-retweet text-black dark:text-white mb-4 text-5xl"></i>
 
                             <p class="text-neutral-700 dark:text-neutral-300">License Automation</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <i class="far fa-folder-open text-red mb-4 text-5xl"></i>
+                            <i class="far fa-folder-open text-black dark:text-white mb-4 text-5xl"></i>
 
                             <p class="text-neutral-700 dark:text-neutral-300">Documentation</p>
                         </div>
@@ -148,12 +149,12 @@
                     <p class="text-neutral-600 dark:text-neutral-300 text-center mb-6">Guided students through complex algorithms and coding challenges to foster academic success.</p>
                     <div class="grid grid-cols-2 gap-8 text-center">
                         <div class="flex flex-col items-center">
-                            <i class="fas fa-network-wired	 text-red mb-4 text-5xl"></i>
+                            <i class="fas fa-network-wired text-black dark:text-white mb-4 text-5xl"></i>
 
                             <p class="text-neutral-700 dark:text-neutral-300">Algorithms</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <i class="fas fa-laptop-code text-red mb-4 text-5xl"></i>
+                            <i class="fas fa-laptop-code text-black dark:text-white mb-4 text-5xl"></i>
 
                             <p class="text-neutral-700 dark:text-neutral-300">Code Review</p>
                         </div>
@@ -207,10 +208,10 @@
             <h2 class="text-3xl font-bold font-heading mb-8 text-center">Resume</h2>
             <div class="max-w-md mx-auto bg-white dark:bg-black border shadow-lg dark:shadow-neutral-900/50 p-8 rounded-lg">
                 <div class="flex flex-col items-center text-center">
-                    <i class="far fa-file-alt text-red mb-4 text-5xl"></i>
+                    <i class="far fa-file-alt text-black dark:text-white mb-4 text-5xl"></i>
                     <h3 class="text-xl font-semibold mb-4">Download My Resume</h3>
                     <p class="text-neutral-600 dark:text-neutral-300 mb-6">Get a complete overview of my experience, skills, and qualifications.</p>
-                    <a href="assets/GregSalmon-CV.html" target="_blank" class="inline-block bg-red text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-opacity-90 transition-colors duration-300">
+                    <a href="assets/GregSalmon-CV.html" target="_blank" class="inline-block bg-black text-white dark:bg-white dark:text-black font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-opacity-90 transition-colors duration-300">
                         Download Resume
                     </a>
                 </div>
