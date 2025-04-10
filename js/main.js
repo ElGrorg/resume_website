@@ -52,4 +52,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.getElementById('projects-container');
         container.scrollBy({ left: 300, behavior: 'smooth' });
     });
+
+    // Simplify the hamburger menu toggle to only open and close on click
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburgerMenu.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('open')) {
+            mobileMenu.style.transform = 'scaleY(0)';
+            setTimeout(() => mobileMenu.classList.remove('open'), 300); // Match transition duration
+        } else {
+            mobileMenu.classList.add('open');
+            mobileMenu.style.transform = 'scaleY(1)';
+        }
+    });
 });
