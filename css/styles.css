@@ -174,3 +174,46 @@ a:hover {
 .scroll-button.right {
     right: 0;
 }
+
+/* Adjust mobile menu to align its left side under the hamburger icon */
+#mobile-menu {
+    position: absolute;
+    top: 100%; /* Open below the hamburger icon */
+    left: 0; /* Align the left side under the hamburger icon */
+    right: auto; /* Reset right positioning */
+    width: auto; /* Automatically adjust width to fit content */
+    min-width: 200px; /* Set a minimum width to ensure it fits text */
+    max-width: 90%; /* Prevent it from being too wide */
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scaleY(0); /* Start collapsed */
+    transform-origin: top left; /* Adjust origin for smooth animation */
+    transition: transform 0.3s ease-in-out; /* Smooth slide-down effect */
+    z-index: 50;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+#mobile-menu.open {
+    transform: scaleY(1); /* Expand to full height */
+}
+
+/* Ensure text in the mobile menu is visible in all states */
+#mobile-menu a {
+    color: #000000; /* Default text color for light mode */
+    text-decoration: none; /* Remove underline */
+}
+
+#mobile-menu a:hover, #mobile-menu a:focus {
+    color: #FF0000; /* Highlight color on hover or focus */
+}
+
+/* Ensure text in the mobile menu is visible in dark mode */
+.dark #mobile-menu a {
+    color: #000000 !important; /* Force black text for dark mode */
+}
+
+/* Ensure red highlighting appears in dark mode */
+.dark #mobile-menu a:hover, .dark #mobile-menu a:focus {
+    color: #FF0000 !important; /* Bright red for hover or focus in dark mode */
+}

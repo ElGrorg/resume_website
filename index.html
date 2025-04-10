@@ -34,13 +34,26 @@
 <body class="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300 font-body">
     <!-- Header/Navigation -->
     <header class="bg-white shadow-md dark:bg-black dark:shadow-neutral-900/50 mx-auto px-4 py-6">
+        <!-- Add a hamburger menu for mobile navigation -->
         <nav class="container mx-auto flex justify-between items-center">
-            <div class="container md:flex justify-center items-center space-x-6">
+            <div class="container hidden md:flex justify-center items-center space-x-6">
                 <a href="#projects" class="hover:text-red">Projects</a>
                 <a href="#experience" class="hover:text-red">Experience</a>
                 <a href="#education" class="hover:text-red">Education</a>
                 <a href="#resume" class="hover:text-red">Resume</a>
                 <a href="#contact" class="hover:text-red">Contact</a>
+            </div>
+            <div class="md:hidden relative">
+                <button id="hamburger-menu" class="p-2 rounded-full">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <div id="mobile-menu" class="absolute right-0 top-full bg-white dark:bg-black shadow-lg rounded-lg hidden">
+                    <a href="#projects" class="block px-4 py-2 hover:text-red">Projects</a>
+                    <a href="#experience" class="block px-4 py-2 hover:text-red">Experience</a>
+                    <a href="#education" class="block px-4 py-2 hover:text-red">Education</a>
+                    <a href="#resume" class="block px-4 py-2 hover:text-red">Resume</a>
+                    <a href="#contact" class="block px-4 py-2 hover:text-red">Contact</a>
+                </div>
             </div>
             <button id="theme-toggle" class="p-2 rounded-full">
                 <svg id="sun-icon" class="w-6 h-6 hidden dark:block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -211,7 +224,7 @@
                     <i class="far fa-file-alt text-black dark:text-white mb-4 text-5xl"></i>
                     <h3 class="text-xl font-semibold mb-4">Download My Resume</h3>
                     <p class="text-neutral-600 dark:text-neutral-300 mb-6">Get a complete overview of my experience, skills, and qualifications.</p>
-                    <a href="assets/GregSalmon-CV.html" target="_blank" class="inline-block bg-black text-white dark:bg-white dark:text-black font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-opacity-90 transition-colors duration-300">
+                    <a href="assets/GregSalmon-CV.html" target="_blank" class="inline-block bg-black text-white dark:bg-white dark:text-black bg-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-opacity-90 transition-colors duration-300">
                         Download Resume
                     </a>
                 </div>
@@ -259,6 +272,11 @@
         document.getElementById('scroll-right').addEventListener('click', () => {
             const container = document.getElementById('projects-container');
             container.scrollBy({ left: container.offsetWidth, behavior: 'smooth' });
+        });
+
+        document.getElementById('hamburger-menu').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>
