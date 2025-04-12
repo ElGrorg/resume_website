@@ -25,7 +25,7 @@ html {
 }
 
 .dark .text-red {
-    color: #FF0000;
+    color: #dfdfdf;
 }
 
 .dark .text-gray-300 {
@@ -33,16 +33,16 @@ html {
 }
 
 .dark .hover\:text-red:hover {
-    color: #ff0000; /* Bright red for hover */
+    color: #dfdfdf; /* Bright red for hover */
 }
 
 .dark .bg-red {
-    background-color: #ff0000; /* Bright red for buttons */
+    background-color: #dfdfdf; /* Bright red for buttons */
     color: #FFFFFF; /* White text for contrast */
 }
 
 .dark .bg-red:hover {
-    background-color: #ff4d4d; /* Lighter red on hover */
+    background-color: #dfdfdf; /* Lighter red on hover */
     opacity: 0.8;
 }
 
@@ -52,20 +52,20 @@ html {
 }
 
 .light .text-red {
-    color: #FF0000;
+    color: #dfdfdf;
 }
 
 .light .hover\:text-red:hover {
-    color: #FF4D4D;
+    color: #dfdfdf;
 }
 
 .light .bg-red {
-    background-color: #FF0000;
+    background-color: #dfdfdf;
     color: #FFFFFF;
 }
 
 .light .bg-red:hover {
-    background-color: #FF4D4D;
+    background-color: #dfdfdf;
 }
 
 /* Modular Section Styles */
@@ -87,7 +87,7 @@ a {
 }
 
 a:hover {
-    color: #FF0000;
+    color: #dfdfdf;
 }
 
 /* Card Hover Effects */
@@ -205,7 +205,7 @@ a:hover {
 }
 
 #mobile-menu a:hover, #mobile-menu a:focus {
-    color: #FF0000; /* Highlight color on hover or focus */
+    color: #dfdfdf; /* Highlight color on hover or focus */
 }
 
 /* Ensure text in the mobile menu is visible in dark mode */
@@ -215,5 +215,5 @@ a:hover {
 
 /* Ensure red highlighting appears in dark mode */
 .dark #mobile-menu a:hover, .dark #mobile-menu a:focus {
-    color: #FF0000 !important; /* Bright red for hover or focus in dark mode */
+    color: #dfdfdf !important; /* Bright red for hover or focus in dark mode */
 }
